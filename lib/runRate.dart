@@ -2,14 +2,14 @@ import 'package:cricket_calculator/viewmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Page3 extends StatefulWidget {
+class RunRate extends StatefulWidget {
   @override
-  _Page3State createState() => _Page3State();
+  _RunRateState createState() => _RunRateState();
 }
 
 
 
-class _Page3State extends State<Page3> {
+class _RunRateState extends State<RunRate> {
   final _runController = TextEditingController();
 final _ballController = TextEditingController();
 var runRate = 10;

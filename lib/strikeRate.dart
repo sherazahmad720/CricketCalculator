@@ -1,16 +1,17 @@
 import 'package:cricket_calculator/viewmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-class Page2 extends StatefulWidget {
+
+class StrikeRate extends StatefulWidget {
   @override
-  _Page2State createState() => _Page2State();
+  StrikeRateState createState() => StrikeRateState();
 }
 
-class _Page2State extends State<Page2> {
-   final _runController = TextEditingController();
+class StrikeRateState extends State<StrikeRate> {
+  final _runController = TextEditingController();
   final _ballController = TextEditingController();
-  var economyRate = 10;
-  double heightSize = 20;
+  var strikeRate = 10;
+  double heightsize = 20;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,61 +21,61 @@ class _Page2State extends State<Page2> {
         child: ListView(
           children: <Widget>[
             SizedBox(
-              height: heightSize,
+              height: heightsize,
             ),
             Center(
               child: Text(
-                "Bowling Economy Rate Calculator",
+                "Batting Strike Rate Calculator",
                 style: GoogleFonts.shrikhand(color: Colors.green, fontSize: 18),
                 textAlign: TextAlign.center,
               ),
             ),
             SizedBox(
-              height: heightSize,
+              height: heightsize,
             ),
             TextField(
               controller: _runController,
               onChanged: (text) {},
               keyboardType: TextInputType.number,
               maxLines: 1,
-              decoration: txtdecoration("Runs Conceded", "59"),
+              decoration: txtdecoration("Runs Scored", "95"),
             ),
             SizedBox(
-              height: heightSize,
+              height: heightsize,
             ),
             TextField(
               controller: _ballController,
               onChanged: (text) {},
               keyboardType: TextInputType.number,
               maxLines: 1,
-              decoration: txtdecoration("Over Bowled", "eg.7.3"),
+              decoration: txtdecoration("Balls Faced", "104"),
             ),
             SizedBox(
-              height: heightSize,
+              height: heightsize,
             ),
             RaisedButton(
               onPressed: () {},
               child: Text(
-                "Calculate Economy Rate",
+                "Calculate Strike Rate",
               ),
               color: Colors.green,
               textColor: Colors.white,
             ),
             SizedBox(
-              height: heightSize,
+              height: heightsize,
             ),
-            economyRate != null
+            strikeRate != null
                 ? Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Column(
                         children: <Widget>[
                           Text(
-                            "Bowler's Economy Rate is  ",
+                            "Batsman's Strike Rate is ",
                             style: GoogleFonts.ubuntu(),
                           ),
                           Text(
-                            "$economyRate",
+                            "$strikeRate",
                             style: GoogleFonts.ubuntu(
                                 color: Colors.green,
                                 fontSize: 40,
